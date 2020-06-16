@@ -17,14 +17,14 @@ import {
 } from 'react-native';
 
 import Header from './components/Header';
-import Screen from './components/Screen';
+import StartGameScreen from './screens/StartGameScreen';
 
 const App: () => React$Node = () => {
   return (
     <SafeAreaView>
       <View style={styles.container}>
         <Header title="Guess the Number" />
-        <Screen />
+        <StartGameScreen />
       </View>
     </SafeAreaView>
   );
