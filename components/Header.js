@@ -11,10 +11,16 @@ const Header = ({title = 'Header'}) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: '12%',
+    height: 90,
+    width: '100%',
+    padding: 36,
+    backgroundColor: '#f7287b',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   headerText: {
     color: '#888',
+    fontSize: 16,
   },
 });
 
