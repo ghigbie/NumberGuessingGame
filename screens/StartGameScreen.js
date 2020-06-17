@@ -1,10 +1,25 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TextInput, Button} from 'react-native';
 
 const StartGameScreen = ({}) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.screenText}>Start Game Screen Component</Text>
+      <Text style={styles.title}>Select a Number</Text>
+      <TextInput />
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Reset"
+          onPress={() => {
+            console.log('Reset was pressed');
+          }}
+        />
+        <Button
+          title="Confirm"
+          onPress={() => {
+            console.log('Confirm was pressed');
+          }}
+        />
+      </View>
     </View>
   );
 };
