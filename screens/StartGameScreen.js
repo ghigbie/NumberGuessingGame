@@ -8,23 +8,19 @@ const StartGameScreen = ({}) => {
       <View style={styles.inputContainer}>
         <TextInput style={styles.input} />
         <View style={styles.buttonContainer}>
-          <View style={styles.button}>
-            <Button
-              title="Reset"
-              color="#f7287b"
-              onPress={() => {
-                console.log('Reset was pressed');
-              }}
-            />
-          </View>
-          <View style={styles.button}>
-            <Button
-              title="Confirm"
-              onPress={() => {
-                console.log('Confirm was pressed');
-              }}
-            />
-          </View>
+          <Button
+            title="Reset"
+            color="#f7287b"
+            onPress={() => {
+              console.log('Reset was pressed');
+            }}
+          />
+          <Button
+            title="Confirm"
+            onPress={() => {
+              console.log('Confirm was pressed');
+            }}
+          />
         </View>
       </View>
     </View>
@@ -36,24 +32,26 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 12,
     alignItems: 'center',
+    justifyContent: 'flex-start',
   },
   title: {
     color: '#888',
     fontSize: 20,
     marginVertical: 12,
+    height: 30,
   },
   inputContainer: {
     width: 300,
     maxWidth: '80%',
     justifyContent: 'space-between',
     alignItems: 'center',
-    shadowColor: '#888',
+    shadowColor: '#aaa',
     shadowOffset: {width: 0, height: 2},
     shadowRadius: 6,
     shadowOpacity: 0.26,
     backgroundColor: '#fff',
-    elevation: 5,
-    padding: 24,
+    elevation: 6,
+    padding: 22,
     borderRadius: 12,
     height: 200,
     minHeight: '40%',
@@ -69,12 +67,9 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: 'row',
     width: '100%',
-    height: 30,
+    height: 40,
     justifyContent: 'space-between',
     paddingHorizontal: 14,
-  },
-  button: {
-    borderRadius: 12,
   },
 });
 
