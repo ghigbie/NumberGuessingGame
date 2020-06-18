@@ -10,20 +10,24 @@ const StartGameScreen = ({}) => {
       <Card style={styles.inputContainer}>
         <TextInput style={styles.input} />
         <View style={styles.buttonContainer}>
-          <Button
-            title="Reset"
-            color={accent}
-            onPress={() => {
-              console.log('Reset was pressed');
-            }}
-          />
-          <Button
-            title="Confirm"
-            color={primary}
-            onPress={() => {
-              console.log('Confirm was pressed');
-            }}
-          />
+          <View style={styles.button}>
+            <Button
+              title="Reset"
+              color={accent}
+              onPress={() => {
+                console.log('Reset was pressed');
+              }}
+            />
+          </View>
+          <View style={styles.button}>
+            <Button
+              title="Confirm"
+              color={primary}
+              onPress={() => {
+                console.log('Confirm was pressed');
+              }}
+            />
+          </View>
         </View>
       </Card>
     </View>
@@ -65,6 +69,9 @@ const styles = StyleSheet.create({
     height: 40,
     justifyContent: 'space-between',
     paddingHorizontal: 14,
+  },
+  button: {
+    width: 100,
   },
 });
 
