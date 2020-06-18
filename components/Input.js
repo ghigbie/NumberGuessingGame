@@ -1,12 +1,10 @@
 import React from 'react';
-import {TextInput, Stylesheet} from 'react-native';
+import {TextInput, StyleSheet} from 'react-native';
 import Colors from './../constants/colors';
 
-const Input = ({style}) => (
-  <TextInput style={{...Stylesheet.input, ...style}} />
-);
+const Input = ({style}) => <TextInput style={{...styles.input, ...style}} />;
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
   input: {
     height: 30,
     width: '80%',
@@ -16,3 +14,5 @@ const styles = Stylesheet.create({
     borderRadius: 4,
   },
 });
+
+export default Input;
