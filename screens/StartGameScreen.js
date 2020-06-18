@@ -19,7 +19,9 @@ const StartGameScreen = ({}) => {
     setEnteredValue(sanitizedText);
   };
 
-  const reset = () => {};
+  const resetInputhandler = () => {
+    setEnteredValue('');
+  };
 
   return (
     <TouchableWithoutFeedback
@@ -45,7 +47,7 @@ const StartGameScreen = ({}) => {
                 title="Reset"
                 color={Colors.accent}
                 onPress={() => {
-                  console.log('Reset was pressed');
+                  resetInputhandler();
                 }}
               />
             </View>
@@ -55,6 +57,7 @@ const StartGameScreen = ({}) => {
                 color={Colors.primary}
                 onPress={() => {
                   console.log('Confirm was pressed');
+                  resetInputhandler();
                 }}
               />
             </View>
