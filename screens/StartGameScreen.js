@@ -5,21 +5,27 @@ import {
   StyleSheet,
   Button,
   TouchableWithoutFeedback,
+  Keyboard,
 } from 'react-native';
 import Colors from './../constants/colors';
 import Card from './../components/Card';
 import Input from './../components/Input';
 
 const StartGameScreen = ({}) => {
-  const [enteredValue, setEnteredValue] = useState;
+  const [enteredValue, setEnteredValue] = useState('');
 
   const numberInputHandler = inputText => {
     const sanitizedText = inputText.replace(/[^0-9]/g, '');
     setEnteredValue(sanitizedText);
   };
 
+  const reset = () => {};
+
   return (
-    <TouchableWithoutFeedback>
+    <TouchableWithoutFeedback
+      onPress={() => {
+        Keyboard.dismiss();
+      }}>
       <View style={styles.container}>
         <Text style={styles.title}>Select a Number</Text>
         <Card style={styles.inputContainer}>
