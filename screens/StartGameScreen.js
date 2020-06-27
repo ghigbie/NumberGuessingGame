@@ -11,6 +11,7 @@ import {
 import Colors from './../constants/colors';
 import Card from './../components/Card';
 import Input from './../components/Input';
+import NumberContainer from './../components/NumberContainer';
 
 const StartGameScreen = ({}) => {
   const [enteredValue, setEnteredValue] = useState('');
@@ -36,12 +37,18 @@ const StartGameScreen = ({}) => {
     setConfirmed(true);
     setSelectedNumber(chosenNumber);
     setEnteredValue('');
+    Keyboard.dismiss();
   };
 
   const resetInputhandler = () => {
     setEnteredValue('');
     setConfirmed(false);
     setSelectedNumber(null);
+    Keyboard.dismiss();
+  };
+
+  const startGame = () => {
+    console.log('Start game was pressed');
   };
 
   return (
@@ -82,7 +89,21 @@ const StartGameScreen = ({}) => {
           </View>
         </View>
       </Card>
-      {confirmed && <Text>Chosen Number: {selectedNumber}</Text>}
+      {confirmed && (
+        <Card style={styles.summaryContainer}>
+          <Text>You Selected:</Text>
+          <NumberContainer>{selectedNumber}</NumberContainer>
+          <View style={styles.summaryButtonContainer}>
+            <Button
+              title="START GAME"
+              color={Colors.primary}
+              onPress={() => {
+                startGame();
+              }}
+            />
+          </View>
+        </Card>
+      )}
     </View>
   );
 };
@@ -128,6 +149,14 @@ const styles = StyleSheet.create({
   },
   button: {
     width: 100,
+  },
+  summaryContainer: {
+    marginTop: 20,
+    alignItems: 'center',
+    height: 200,
+  },
+  summaryButtonContainer: {
+    marginTop: 8,
   },
 });
 
