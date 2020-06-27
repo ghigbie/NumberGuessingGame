@@ -25,7 +25,7 @@ const GameScreen = ({userChoice}) => {
     <View style={styles.container}>
       <Text>Opponent's Guess</Text>
       <NumberContainer>{currentGuess}</NumberContainer>
-      <Card>
+      <Card style={styles.buttonContainer}>
         <Button
           title="Lower"
           onPress={() => {
@@ -44,7 +44,18 @@ const GameScreen = ({userChoice}) => {
 };
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    flex: 1,
+    padding: 12,
+    alignItems: 'center',
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: 20,
+    width: 300,
+    maxWidth: '80%',
+  },
 });
 
 export default GameScreen;
