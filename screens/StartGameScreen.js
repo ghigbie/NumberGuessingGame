@@ -6,6 +6,7 @@ import {
   Button,
   TouchableWithoutFeedback,
   Keyboard,
+  Alert,
 } from 'react-native';
 import Colors from './../constants/colors';
 import Card from './../components/Card';
@@ -23,8 +24,13 @@ const StartGameScreen = ({}) => {
 
   const confirmInputHandler = () => {
     const chosenNumber = parseInt(enteredValue);
-    if (isNaN(chosenNumber) || chosenNumber <= 0) {
+    if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber >= 99) {
       console.log('invalid input: NaN or less than 0');
+      Alert.alert(
+        'Invalid Number Entered',
+        'Please enter a number between 1 and 99',
+        [{text: 'Okay', style: 'destructive', onPress: resetInputhandler}],
+      );
       return;
     }
     setConfirmed(true);
@@ -39,47 +45,45 @@ const StartGameScreen = ({}) => {
   };
 
   return (
-    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-      <View style={styles.container}>
-        <Text style={styles.title}>Start a New Game</Text>
-        <Card style={styles.inputContainer}>
-          <Text style={styles.itle}>Select a Number</Text>
-          <Input
-            style={styles.input}
-            blurOnSubmit
-            autoCapitalize="none"
-            autoCorrenct={false}
-            keyboardType="number-pad"
-            maxLength={2}
-            onChangeText={numberInputHandler}
-            value={enteredValue}
-          />
-          <View style={styles.buttonContainer}>
-            <View style={styles.button}>
-              <Button
-                title="Reset"
-                color={Colors.accent}
-                onPress={() => {
-                  console.log('Reset was pressed');
-                  resetInputhandler();
-                }}
-              />
-            </View>
-            <View style={styles.button}>
-              <Button
-                title="Confirm"
-                color={Colors.primary}
-                onPress={() => {
-                  console.log('Confirm was pressed');
-                  confirmInputHandler();
-                }}
-              />
-            </View>
+    <View style={styles.container}>
+      <Text style={styles.title}>Start a New Game</Text>
+      <Card style={styles.inputContainer}>
+        <Text style={styles.itle}>Select a Number</Text>
+        <Input
+          style={styles.input}
+          blurOnSubmit
+          autoCapitalize="none"
+          autoCorrenct={false}
+          keyboardType="number-pad"
+          maxLength={2}
+          onChangeText={numberInputHandler}
+          value={enteredValue}
+        />
+        <View style={styles.buttonContainer}>
+          <View style={styles.button}>
+            <Button
+              title="Reset"
+              color={Colors.accent}
+              onPress={() => {
+                console.log('Reset was pressed');
+                resetInputhandler();
+              }}
+            />
           </View>
-        </Card>
-        {confirmed && <Text>Chosen Number: {selectedNumber}</Text>}
-      </View>
-    </TouchableWithoutFeedback>
+          <View style={styles.button}>
+            <Button
+              title="Confirm"
+              color={Colors.primary}
+              onPress={() => {
+                console.log('Confirm was pressed');
+                confirmInputHandler();
+              }}
+            />
+          </View>
+        </View>
+      </Card>
+      {confirmed && <Text>Chosen Number: {selectedNumber}</Text>}
+    </View>
   );
 };
 
