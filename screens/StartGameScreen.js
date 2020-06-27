@@ -29,8 +29,9 @@ const StartGameScreen = ({}) => {
         Keyboard.dismiss();
       }}>
       <View style={styles.container}>
-        <Text style={styles.title}>Select a Number</Text>
+        <Text style={styles.title}>Start a New Game</Text>
         <Card style={styles.inputContainer}>
+          <Text style={styles.itle}>Select a Number</Text>
           <Input
             style={styles.input}
             blurOnSubmit
@@ -76,7 +77,14 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   title: {
-    color: '#888',
+    color: Colors.softGrey,
+    fontSize: 24,
+    marginVertical: 12,
+    height: 36,
+    fontWeight: '700',
+  },
+  cardTitle: {
+    color: Colors.softGrey,
     fontSize: 20,
     marginVertical: 12,
     height: 30,
