@@ -13,14 +13,29 @@ import Input from './../components/Input';
 
 const StartGameScreen = ({}) => {
   const [enteredValue, setEnteredValue] = useState('');
+  const [confirmed, setConfirmed] = useState(false);
+  const [selectedNumber, setSelectedNumber] = useState(null);
 
   const numberInputHandler = inputText => {
     const sanitizedText = inputText.replace(/[^0-9]/g, '');
     setEnteredValue(sanitizedText);
   };
 
+  const confirmInputHandler = () => {
+    const chosenNumber = parseInt(enteredValue);
+    if (isNaN(chosenNumber) || chosenNumber <= 0) {
+      console.log('invalid input: NaN or less than 0');
+      return;
+    }
+    setConfirmed(true);
+    setSelectedNumber(chosenNumber);
+    setEnteredValue('');
+  };
+
   const resetInputhandler = () => {
     setEnteredValue('');
+    setConfirmed(false);
+    setSelectedNumber(null);
   };
 
   return (
@@ -56,12 +71,13 @@ const StartGameScreen = ({}) => {
                 color={Colors.primary}
                 onPress={() => {
                   console.log('Confirm was pressed');
-                  resetInputhandler();
+                  confirmInputHandler();
                 }}
               />
             </View>
           </View>
         </Card>
+        {confirmed && <Text>Chosen Number: {selectedNumber}</Text>}
       </View>
     </TouchableWithoutFeedback>
   );
