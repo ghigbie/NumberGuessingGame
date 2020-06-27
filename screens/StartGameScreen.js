@@ -24,10 +24,7 @@ const StartGameScreen = ({}) => {
   };
 
   return (
-    <TouchableWithoutFeedback
-      onPress={() => {
-        Keyboard.dismiss();
-      }}>
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={styles.container}>
         <Text style={styles.title}>Start a New Game</Text>
         <Card style={styles.inputContainer}>
@@ -48,6 +45,7 @@ const StartGameScreen = ({}) => {
                 title="Reset"
                 color={Colors.accent}
                 onPress={() => {
+                  console.log('Reset was pressed');
                   resetInputhandler();
                 }}
               />

@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
     color: Colors.softGrey,
     borderWidth: 1,
     borderRadius: 4,
+    minWidth: 48,
   },
 });
 
