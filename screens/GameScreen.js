@@ -42,8 +42,7 @@ const GameScreen = ({userChoice}) => {
     }
     if (direction === 'lower') {
       currentHigh.current = currentGuess;
-    }
-    if (direction === 'greater') {
+    } else {
       currentLow.current = currentGuess;
     }
     generateRandomBetween(currentLow, currentLow, userChoice);
