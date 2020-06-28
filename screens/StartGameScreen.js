@@ -23,7 +23,7 @@ const StartGameScreen = ({}) => {
     setEnteredValue(sanitizedText);
   };
 
-  const confirmInputHandler = () => {
+  const confirmInputHandler = ({onStartGame}) => {
     const chosenNumber = parseInt(enteredValue);
     if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber >= 99) {
       console.log('invalid input: NaN or less than 0');
@@ -98,7 +98,7 @@ const StartGameScreen = ({}) => {
               title="START GAME"
               color={Colors.primary}
               onPress={() => {
-                startGame();
+                onStartGame(selectedNumber);
               }}
             />
           </View>

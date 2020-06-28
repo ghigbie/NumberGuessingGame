@@ -6,18 +6,25 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import {SafeAreaView, StyleSheet, View} from 'react-native';
 
 import Header from './components/Header';
 import StartGameScreen from './screens/StartGameScreen';
 
 const App: () => React$Node = () => {
+  const [userNumber, setUserNumber] = useState();
+
+  const startGameHandler = selectedNumber => {
+    setUserNumber(selectedNumber)
+  }
+
+  const startGameHandler = ()
   return (
     <SafeAreaView>
       <View style={styles.container}>
         <Header title="Guess the Number" />
-        <StartGameScreen />
+        {userNumber ? <GameScreen /> : <StartGameScreen onStartGame={startGameHandler}/>}
       </View>
     </SafeAreaView>
   );
