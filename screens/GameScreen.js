@@ -17,23 +17,26 @@ const generateRandomBetween = (min, max, exclude) => {
 };
 
 const GameScreen = ({userChoice}) => {
+  console.log(userChoice);
   const [currentGuess, setCurrentGuess] = useState(
-    generateRandomBetween(1, 100),
-    userChoice,
+    generateRandomBetween(0, 100, userChoice),
   );
+  console.log(currentGuess);
   return (
     <View style={styles.container}>
-      <Text>Opponent's Guess</Text>
+      <Text style={styles.text}>Opponent's Guess</Text>
       <NumberContainer>{currentGuess}</NumberContainer>
       <Card style={styles.buttonContainer}>
         <Button
           title="Lower"
+          color={Colors.accent}
           onPress={() => {
             console.log('lower pressed');
           }}
         />
         <Button
           title="Greater"
+          color={Colors.primary}
           onPress={() => {
             console.log('greater pressed');
           }}
@@ -45,9 +48,15 @@ const GameScreen = ({userChoice}) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    padding: 12,
+    height: '100%',
     alignItems: 'center',
+  },
+  text: {
+    fontSize: 22,
+    marginTop: 26,
+    marginBottom: 14,
+    height: 24,
+    color: Colors.softGrey,
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -55,6 +64,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     width: 300,
     maxWidth: '80%',
+    minHeight: 80,
   },
 });
 

@@ -23,6 +23,8 @@ const styles = StyleSheet.create({
   numberText: {
     color: Colors.accent,
     fontSize: 22,
+    height: 22,
+    margin: 6,
   },
 });
 
