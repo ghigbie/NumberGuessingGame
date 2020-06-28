@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   container: {
     borderWidth: 2,
     borderColor: Colors.accent,
-    padding: 16,
+    padding: 20,
     borderRadius: 10,
     marginVertical: 10,
     alignItems: 'center',
@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
   numberText: {
     color: Colors.accent,
     fontSize: 22,
-    height: 22,
-    margin: 6,
+    height: 24,
+    marginBottom: 6,
   },
 });
 
