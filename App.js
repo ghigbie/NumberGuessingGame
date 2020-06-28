@@ -11,20 +11,22 @@ import {SafeAreaView, StyleSheet, View} from 'react-native';
 
 import Header from './components/Header';
 import StartGameScreen from './screens/StartGameScreen';
+import GameScreen from './screens/GameScreen';
 
 const App: () => React$Node = () => {
   const [userNumber, setUserNumber] = useState();
 
-  const startGameHandler = selectedNumber => {
-    setUserNumber(selectedNumber)
-  }
+  const startGameHandler = selectedNumber => setUserNumber(selectedNumber);
 
-  const startGameHandler = ()
   return (
     <SafeAreaView>
       <View style={styles.container}>
         <Header title="Guess the Number" />
-        {userNumber ? <GameScreen /> : <StartGameScreen onStartGame={startGameHandler}/>}
+        {userNumber ? (
+          <GameScreen userChoice={userNumber} />
+        ) : (
+          <StartGameScreen onStartGame={startGameHandler} />
+        )}
       </View>
     </SafeAreaView>
   );

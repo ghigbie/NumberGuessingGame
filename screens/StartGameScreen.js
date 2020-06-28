@@ -47,10 +47,6 @@ const StartGameScreen = ({}) => {
     Keyboard.dismiss();
   };
 
-  const startGame = () => {
-    console.log('Start game was pressed');
-  };
-
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Start a New Game</Text>
