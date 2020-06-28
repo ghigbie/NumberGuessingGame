@@ -13,7 +13,7 @@ import Card from './../components/Card';
 import Input from './../components/Input';
 import NumberContainer from './../components/NumberContainer';
 
-const StartGameScreen = ({}) => {
+const StartGameScreen = ({onStartGame}) => {
   const [enteredValue, setEnteredValue] = useState('');
   const [confirmed, setConfirmed] = useState(false);
   const [selectedNumber, setSelectedNumber] = useState(null);
@@ -23,7 +23,7 @@ const StartGameScreen = ({}) => {
     setEnteredValue(sanitizedText);
   };
 
-  const confirmInputHandler = ({onStartGame}) => {
+  const confirmInputHandler = () => {
     const chosenNumber = parseInt(enteredValue);
     if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber >= 99) {
       console.log('invalid input: NaN or less than 0');
