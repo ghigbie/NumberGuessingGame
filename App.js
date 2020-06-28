@@ -6,12 +6,13 @@
  * @flow strict-local
  */
 
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {SafeAreaView, StyleSheet, View} from 'react-native';
 
 import Header from './components/Header';
 import StartGameScreen from './screens/StartGameScreen';
 import GameScreen from './screens/GameScreen';
+import GameOverScreen from './screens/GameOverScreen';
 
 const App: () => React$Node = () => {
   const [userNumber, setUserNumber] = useState();
@@ -25,7 +26,7 @@ const App: () => React$Node = () => {
         {userNumber ? (
           <GameScreen userChoice={userNumber} />
         ) : (
-          <StartGameScreen onStartGame={startGameHandler} />
+          <GameOverScreen onStartGame={startGameHandler} />
         )}
       </View>
     </SafeAreaView>
