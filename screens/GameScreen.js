@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import {View, Text, Button, StyleSheet, Alert} from 'react-native';
 import Colors from './../constants/colors';
 

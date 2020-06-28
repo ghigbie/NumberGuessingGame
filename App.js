@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {SafeAreaView, StyleSheet, View} from 'react-native';
 
 import Header from './components/Header';
