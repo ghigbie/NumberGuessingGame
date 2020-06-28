@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import {View, Text, Button, StyleSheet, Alert} from 'react-native';
 import Colors from './../constants/colors';
 
@@ -21,6 +21,8 @@ const GameScreen = ({userChoice}) => {
   const [currentGuess, setCurrentGuess] = useState(
     generateRandomBetween(0, 100, userChoice),
   );
+  const currentHigh = useRef(1);
+  const currentLow = useRef(100);
 
   const nextGuessHandler = direction => {
     console.log(`nextGeussHandler called DIRECTION: ${direction}`);
@@ -28,11 +30,23 @@ const GameScreen = ({userChoice}) => {
       (direction === 'lower' && currentGuess < userChoice) ||
       (direction === 'greater' && currentGuess > userChoice)
     ) {
-      Alert.alert("Don't lie!", 'You know that this is wrong...', {
-        text: 'Sorry!',
-        style: 'cancel',
-      });
+      Alert.alert(
+        "Don't lie!",
+        'You know that this is wrong...Is number greater or lower?',
+        {
+          text: 'Sorry!',
+          style: 'cancel',
+        },
+      );
+      return;
     }
+    if (direction === 'lower') {
+      currentHigh.current = currentGuess;
+    }
+    if (direction === 'greater') {
+      currentLow.current = currentGuess;
+    }
+    generateRandomBetween(currentLow, currentLow, userChoice);
   };
 
   return (
