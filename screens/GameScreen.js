@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, Button, StyleSheet} from 'react-native';
+import {View, Text, Button, StyleSheet, Alert} from 'react-native';
 import Colors from './../constants/colors';
 
 import NumberContainer from './../components/NumberContainer';
@@ -21,7 +21,20 @@ const GameScreen = ({userChoice}) => {
   const [currentGuess, setCurrentGuess] = useState(
     generateRandomBetween(0, 100, userChoice),
   );
-  console.log(currentGuess);
+
+  const nextGuessHandler = direction => {
+    console.log(`nextGeussHandler called DIRECTION: ${direction}`);
+    if (
+      (direction === 'lower' && currentGuess < userChoice) ||
+      (direction === 'greater' && currentGuess > userChoice)
+    ) {
+      Alert.alert("Don't lie!", 'You know that this is wrong...', {
+        text: 'Sorry!',
+        style: 'cancel',
+      });
+    }
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Opponent's Guess</Text>
@@ -31,14 +44,14 @@ const GameScreen = ({userChoice}) => {
           title="Lower"
           color={Colors.accent}
           onPress={() => {
-            console.log('lower pressed');
+            nextGuessHandler('lower');
           }}
         />
         <Button
           title="Greater"
           color={Colors.primary}
           onPress={() => {
-            console.log('greater pressed');
+            nextGuessHandler('greater');
           }}
         />
       </Card>
