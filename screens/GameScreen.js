@@ -33,10 +33,12 @@ const GameScreen = ({userChoice}) => {
       Alert.alert(
         "Don't lie!",
         'You know that this is wrong...Is number greater or lower?',
-        {
-          text: 'Sorry!',
-          style: 'cancel',
-        },
+        [
+          {
+            text: 'Sorry!',
+            style: 'cancel',
+          },
+        ],
       );
       return;
     }
