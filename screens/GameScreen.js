@@ -26,6 +26,11 @@ const GameScreen = ({userChoice}) => {
   const currentLow = useRef(absMin);
   const currentHigh = useRef(absMax);
 
+  useEffect(() => {
+    if (currentGuess === userChoice) {
+    }
+  });
+
   const nextGuessHandler = direction => {
     console.log(`nextGeussHandler called DIRECTION: ${direction}`);
     if (
