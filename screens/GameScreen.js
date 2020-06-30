@@ -16,10 +16,12 @@ const generateRandomBetween = (min, max, exclude) => {
   }
 };
 
-const GameScreen = ({userChoice}) => {
+const GameScreen = ({userChoice, onGameOver}) => {
+  const [rounds, setRounds] = useState(0);
+
   const absMin = 0;
   const absMax = 100;
-  console.log(userChoice);
+
   const [currentGuess, setCurrentGuess] = useState(
     generateRandomBetween(absMin, absMax, userChoice),
   );
@@ -28,8 +30,9 @@ const GameScreen = ({userChoice}) => {
 
   useEffect(() => {
     if (currentGuess === userChoice) {
+      onGameOver(rounds);
     }
-  });
+  }, [currentGuess, userChoice, onGameOver]);
 
   const nextGuessHandler = direction => {
     console.log(`nextGeussHandler called DIRECTION: ${direction}`);
@@ -57,10 +60,10 @@ const GameScreen = ({userChoice}) => {
     const nextNumber = generateRandomBetween(
       currentHigh.current,
       currentLow.current,
-      userChoice,
     );
     console.log('NEXT NUMBER: ', nextNumber);
     setCurrentGuess(nextNumber);
+    setRounds(rounds + 1);
   };
 
   return (

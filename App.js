@@ -27,14 +27,11 @@ const App: () => React$Node = () => {
   let content = <StartGameScreen onStartGame={startGameHandler} />;
 
   if (userNumber && guessRounds <= 0) {
-    content = <GameScreen userChoice={userNumber} />;
-  } else if (guessRounds > 0) {
     content = (
-      <GameOverScreen
-        onStartGame={startGameHandler}
-        onGameOver={gameOverHandler}
-      />
+      <GameScreen userChoice={userNumber} onGameOver={gameOverHandler} />
     );
+  } else if (guessRounds > 0) {
+    content = <GameOverScreen onStartGame={startGameHandler} />;
   }
 
   return (
