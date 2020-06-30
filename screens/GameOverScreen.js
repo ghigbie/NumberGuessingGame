@@ -7,8 +7,7 @@ const GameOverScreen = ({guessRounds, userNumber}) => {
       <Text style={styles.text}>Game Over!</Text>
       <Text style={styles.text}>
         I won! It only took me {guessRounds}
-        {''}
-        {guessRounds > 0 ? 'tries' : 'try'}!
+        {guessRounds > 0 ? ' tries' : ' try'}!
       </Text>
       <Text style={styles.text}>The number was: {userNumber}</Text>
     </View>
