@@ -24,6 +24,7 @@ const App: () => React$Node = () => {
   };
 
   const gameOverHandler = numOfRounds => setGuessRounds(numOfRounds);
+
   let content = <StartGameScreen onStartGame={startGameHandler} />;
 
   if (userNumber && guessRounds <= 0) {
@@ -31,7 +32,13 @@ const App: () => React$Node = () => {
       <GameScreen userChoice={userNumber} onGameOver={gameOverHandler} />
     );
   } else if (guessRounds > 0) {
-    content = <GameOverScreen onStartGame={startGameHandler} />;
+    content = (
+      <GameOverScreen
+        onStartGame={startGameHandler}
+        userNumber={userNumber}
+        guessRounds={guessRounds}
+      />
+    );
   }
 
   return (

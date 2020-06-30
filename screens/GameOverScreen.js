@@ -1,12 +1,16 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-const GameOverScreen = () => {
-  const [win, setWin] = useState(true);
+const GameOverScreen = ({guessRounds, userNumber}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Game Over!</Text>
-      <Text style={styles.text}>{win ? 'You won!' : 'You lost'}</Text>
+      <Text style={styles.text}>
+        I won! It only took me {guessRounds}
+        {''}
+        {guessRounds > 0 ? 'tries' : 'try'}!
+      </Text>
+      <Text style={styles.text}>The number was: {userNumber}</Text>
     </View>
   );
 };
