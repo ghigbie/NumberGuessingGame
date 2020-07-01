@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: Colors.softGrey,
-    //fontSize: 24,
+    fontSize: 24,
     marginVertical: 12,
     height: 36,
     fontFamily: 'OpenSans-Bold',
