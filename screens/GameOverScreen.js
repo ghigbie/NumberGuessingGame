@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     height: 28,
     marginVertical: 14,
+    textAlign: 'center',
   },
   buttonContainer: {
     marginVertical: 24,
@@ -54,6 +55,7 @@ const styles = StyleSheet.create({
   },
   highlight: {
     color: colors.primary,
+    fontFamily: 'OpenSans-Bold',
   },
 });
 

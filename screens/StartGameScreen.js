@@ -70,7 +70,6 @@ const StartGameScreen = ({onStartGame}) => {
               title="Reset"
               color={Colors.accent}
               onPress={() => {
-                console.log('Reset was pressed');
                 resetInputhandler();
               }}
             />
@@ -80,7 +79,6 @@ const StartGameScreen = ({onStartGame}) => {
               title="Confirm"
               color={Colors.primary}
               onPress={() => {
-                console.log('Confirm was pressed');
                 confirmInputHandler();
               }}
             />
@@ -118,8 +116,6 @@ const styles = StyleSheet.create({
     fontSize: 24,
     marginVertical: 12,
     height: 36,
-    // fontFamily: 'OpenSans-Bold',
-    //fontWeight: '700',
   },
   cardTitle: {
     color: Colors.softGrey,
