@@ -4,17 +4,25 @@ import Colors from './../constants/colors';
 import Card from './../components/Card';
 import TitleText from './../components/TitleText';
 import BodyText from './../components/BodyText';
+import colors from './../constants/colors';
 
 const GameOverScreen = ({guessRounds, userNumber, onStartGame}) => {
   return (
     <View style={styles.container}>
       <TitleText style={styles.text}>Game Over!</TitleText>
-      <Image source={require('./../assets/success.png')} style={styles.image} />
+      <Image
+        source={require('./../assets/success.png')}
+        style={styles.image}
+        resizeMode="cover"
+      />
       <BodyText style={styles.text}>
-        I won! It only took me {guessRounds}
+        I won! It only took me{' '}
+        <Text style={styles.highlight}>{guessRounds}</Text>
         {guessRounds > 1 ? ' tries' : ' try'}!
       </BodyText>
-      <Text style={styles.text}>The number was: {userNumber}</Text>
+      <Text style={styles.text}>
+        The number was: <Text style={styles.highlight}>{userNumber}</Text>
+      </Text>
       <View style={styles.buttonContainer}>
         <Button title="New Game" onPress={onStartGame} color={Colors.primary} />
       </View>
@@ -43,6 +51,9 @@ const styles = StyleSheet.create({
     width: '80%',
     height: 240,
     borderRadius: 35,
+  },
+  highlight: {
+    color: colors.primary,
   },
 });
 
