@@ -12,6 +12,8 @@ import Colors from './../constants/colors';
 import Card from './../components/Card';
 import Input from './../components/Input';
 import NumberContainer from './../components/NumberContainer';
+import TitleText from './../components/TitleText';
+import BodyText from './../components/BodyText';
 
 const StartGameScreen = ({onStartGame}) => {
   const [enteredValue, setEnteredValue] = useState('');
@@ -49,9 +51,9 @@ const StartGameScreen = ({onStartGame}) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Start a New Game</Text>
+      <TitleText style={styles.title}>Start a New Game</TitleText>
       <Card style={styles.inputContainer}>
-        <Text style={styles.title}>Select a Number</Text>
+        <TitleText style={styles.title}>Select a Number</TitleText>
         <Input
           style={styles.input}
           blurOnSubmit
@@ -87,7 +89,7 @@ const StartGameScreen = ({onStartGame}) => {
       </Card>
       {confirmed && (
         <Card style={styles.summaryContainer}>
-          <Text>You Selected:</Text>
+          <BodyText>You Selected:</BodyText>
           <NumberContainer>{selectedNumber}</NumberContainer>
           <View style={styles.summaryButtonContainer}>
             <Button
@@ -116,7 +118,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     marginVertical: 12,
     height: 36,
-    fontFamily: 'OpenSans-Bold',
+    // fontFamily: 'OpenSans-Bold',
     //fontWeight: '700',
   },
   cardTitle: {

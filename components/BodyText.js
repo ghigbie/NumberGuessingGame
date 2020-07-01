@@ -9,11 +9,10 @@ const BodyText = ({style, children}) => (
 
 const styles = StyleSheet.create({
   body: {
-    color: Colors.softGrey,
-    fontSize: 24,
-    marginVertical: 12,
-    height: 36,
-    fontFamily: 'OpenSans-Bold',
+    color: '#000',
+    fontSize: 18,
+    height: 22,
+    fontFamily: 'OpenSans-Regular',
   },
 });
 

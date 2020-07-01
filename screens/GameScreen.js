@@ -4,6 +4,7 @@ import Colors from './../constants/colors';
 
 import NumberContainer from './../components/NumberContainer';
 import Card from './../components/Card';
+import TitleText from './../components/TitleText';
 
 const generateRandomBetween = (min, max, exclude) => {
   min = Math.ceil(min);
@@ -68,7 +69,7 @@ const GameScreen = ({userChoice, onGameOver}) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Opponent's Guess</Text>
+      <TitleText style={styles.text}>Opponent's Guess</TitleText>
       <NumberContainer>{currentGuess}</NumberContainer>
       <Card style={styles.buttonContainer}>
         <Button
@@ -96,11 +97,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    fontSize: 22,
-    marginTop: 26,
-    marginBottom: 14,
-    height: 24,
-    color: Colors.softGrey,
+    fontSize: 24,
+    marginVertical: 12,
+    height: 36,
   },
   buttonContainer: {
     flexDirection: 'row',
