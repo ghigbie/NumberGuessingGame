@@ -15,7 +15,13 @@ const GameOverScreen = ({guessRounds, userNumber, onStartGame}) => {
           {guessRounds > 1 ? ' tries' : ' try'}!
         </BodyText>
         <Text style={styles.text}>The number was: {userNumber}</Text>
-        <Button title="New Game" onPress={onStartGame} color={Colors.primary} />
+        <View style={styles.buttonContainer}>
+          <Button
+            title="New Game"
+            onPress={onStartGame}
+            color={Colors.primary}
+          />
+        </View>
       </View>
     </Card>
   );
@@ -34,6 +40,9 @@ const styles = StyleSheet.create({
     fontSize: 24,
     height: 28,
     marginVertical: 14,
+  },
+  buttonContainer: {
+    marginVertical: 24,
   },
 });
 

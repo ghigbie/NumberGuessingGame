@@ -1,0 +1,6 @@
+module Pods_NumberGuessGame_NumberGuessGameTests {
+  umbrella header "Pods-NumberGuessGame-NumberGuessGameTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
