@@ -93,7 +93,7 @@ const StartGameScreen = ({onStartGame}) => {
           <NumberContainer>{selectedNumber}</NumberContainer>
           <View style={styles.summaryButtonContainer}>
             <MainButton onPress={() => onStartGame(selectedNumber)}>
-              START GAME
+              <Icon name="rocket" size={24} color="#fff" />
             </MainButton>
           </View>
         </Card>

@@ -5,6 +5,7 @@ import TitleText from './../components/TitleText';
 import BodyText from './../components/BodyText';
 import MainButton from './../components/MainButton';
 import colors from './../constants/colors';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const GameOverScreen = ({guessRounds, userNumber, onStartGame}) => {
   return (
@@ -24,7 +25,9 @@ const GameOverScreen = ({guessRounds, userNumber, onStartGame}) => {
         The number was: <Text style={styles.highlight}>{userNumber}</Text>
       </Text>
       <View style={styles.buttonContainer}>
-        <MainButton onPress={onStartGame}>NEW GAME</MainButton>
+        <MainButton onPress={onStartGame}>
+          <Icon name="rocket" size={24} color="#fff" />
+        </MainButton>
       </View>
     </View>
   );
