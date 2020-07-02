@@ -15,6 +15,7 @@ import NumberContainer from './../components/NumberContainer';
 import TitleText from './../components/TitleText';
 import BodyText from './../components/BodyText';
 import MainButton from './../components/MainButton';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const StartGameScreen = ({onStartGame}) => {
   const [enteredValue, setEnteredValue] = useState('');
