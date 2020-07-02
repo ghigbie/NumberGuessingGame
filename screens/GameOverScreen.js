@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, Text, StyleSheet, Button, Image} from 'react-native';
 import Colors from './../constants/colors';
-import Card from './../components/Card';
 import TitleText from './../components/TitleText';
 import BodyText from './../components/BodyText';
+import MainButton from './../components/MainButton';
 import colors from './../constants/colors';
 
 const GameOverScreen = ({guessRounds, userNumber, onStartGame}) => {
@@ -24,7 +24,7 @@ const GameOverScreen = ({guessRounds, userNumber, onStartGame}) => {
         The number was: <Text style={styles.highlight}>{userNumber}</Text>
       </Text>
       <View style={styles.buttonContainer}>
-        <Button title="New Game" onPress={onStartGame} color={Colors.primary} />
+        <MainButton onPress={onStartGame}>NEW GAME</MainButton>
       </View>
     </View>
   );

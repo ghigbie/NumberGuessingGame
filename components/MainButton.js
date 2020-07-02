@@ -4,8 +4,8 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Colors from './../constants/colors';
 
 const MainButton = ({style, onPress, children}) => (
-  <TouchableOpacity onPress={() => {}}>
-    <View style={styles.container}>
+  <TouchableOpacity activeOpacity={0.8} onPress={onPress}>
+    <View style={{...styles.container, ...style}}>
       <Text style={styles.text}>{children}</Text>
     </View>
   </TouchableOpacity>
@@ -14,13 +14,16 @@ const MainButton = ({style, onPress, children}) => (
 const styles = StyleSheet.create({
   container: {
     backgroundColor: Colors.primary,
-    paddingVerticle: 12,
-    paddingHorizontal: 30,
+    paddingVertical: 8,
+    paddingHorizontal: 20,
+    borderRadius: 26,
+    height: 38,
   },
   text: {
     color: '#fff',
     fontFamily: 'OpenSans-Regular',
-    fontSize: 80,
+    fontSize: 16,
+    fontWeight: '700',
   },
 });
 
