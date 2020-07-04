@@ -19,6 +19,7 @@ const generateRandomBetween = (min, max, exclude) => {
 
 const GameScreen = ({userChoice, onGameOver}) => {
   const [rounds, setRounds] = useState(0);
+  const [guesses, setGuesses] = useState([]);
 
   const absMin = 0;
   const absMax = 100;
@@ -64,6 +65,7 @@ const GameScreen = ({userChoice, onGameOver}) => {
     );
     console.log('NEXT NUMBER: ', nextNumber);
     setCurrentGuess(nextNumber);
+    setGuesses([...guesses, currentGuess]);
     setRounds(rounds + 1);
   };
 
@@ -87,6 +89,15 @@ const GameScreen = ({userChoice, onGameOver}) => {
           }}
         />
       </Card>
+      {guesses.length > 0 && (
+        <Card style={styles.guessCard}>
+          {guesses.map((guess, index) => (
+            <View key={index} style={styles.guessContainer}>
+              <Text style={styles.guessText}>{guess}</Text>
+            </View>
+          ))}
+        </Card>
+      )}
     </View>
   );
 };
@@ -108,6 +119,21 @@ const styles = StyleSheet.create({
     width: 300,
     maxWidth: '80%',
     minHeight: 80,
+  },
+  guessCard: {
+    marginVertical: 16,
+    minHeight: 240,
+    padding: 18,
+  },
+  guessContainer: {
+    height: 22,
+    marginVertical: 8,
+  },
+  guessText: {
+    fontSize: 22,
+    height: 26,
+    paddingLeft: 4,
+    color: Colors.primary,
   },
 });
 
