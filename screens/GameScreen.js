@@ -64,7 +64,7 @@ const GameScreen = ({userChoice, onGameOver}) => {
     );
     console.log('NEXT NUMBER: ', nextNumber);
     setCurrentGuess(nextNumber);
-    setGuesses([...guesses, currentGuess]);
+    setGuesses([currentGuess, ...guesses]);
   };
 
   return (
