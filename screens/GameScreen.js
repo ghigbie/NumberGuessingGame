@@ -5,6 +5,7 @@ import Colors from './../constants/colors';
 import NumberContainer from './../components/NumberContainer';
 import Card from './../components/Card';
 import TitleText from './../components/TitleText';
+import ListItem from './../components/ListItem';
 
 const generateRandomBetween = (min, max, exclude) => {
   min = Math.ceil(min);
@@ -90,9 +91,7 @@ const GameScreen = ({userChoice, onGameOver}) => {
       {guesses.length > 0 && (
         <Card style={styles.guessCard}>
           {guesses.map((guess, index) => (
-            <View key={index} style={styles.guessContainer}>
-              <Text style={styles.guessText}>{guess}</Text>
-            </View>
+            <ListItem key={index} style={styles.guessContainer} item={guess} />
           ))}
         </Card>
       )}
