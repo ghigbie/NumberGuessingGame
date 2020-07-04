@@ -18,7 +18,6 @@ const generateRandomBetween = (min, max, exclude) => {
 };
 
 const GameScreen = ({userChoice, onGameOver}) => {
-  const [rounds, setRounds] = useState(0);
   const [guesses, setGuesses] = useState([]);
 
   const absMin = 0;
@@ -32,7 +31,7 @@ const GameScreen = ({userChoice, onGameOver}) => {
 
   useEffect(() => {
     if (currentGuess === userChoice) {
-      onGameOver(rounds);
+      onGameOver(guesses.length);
     }
   }, [currentGuess, userChoice, onGameOver]);
 
@@ -66,7 +65,6 @@ const GameScreen = ({userChoice, onGameOver}) => {
     console.log('NEXT NUMBER: ', nextNumber);
     setCurrentGuess(nextNumber);
     setGuesses([...guesses, currentGuess]);
-    setRounds(rounds + 1);
   };
 
   return (
