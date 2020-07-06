@@ -1,17 +1,22 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import Card from './../components/Card';
 import Colors from './../constants/colors';
 
 const ListItem = ({item, style}) => (
-  <View style={{...styles.itemContainer, ...style}}>
-    <Text style={styles.itemText}>{item}</Text>
-  </View>
+  <Card style={styles.cardStyles}>
+    <View style={{...styles.itemContainer, ...style}}>
+      <Text style={styles.itemText}>{item}</Text>
+    </View>
+  </Card>
 );
 
 const styles = StyleSheet.create({
+  cardStyles: {
+    marginVertical: 4,
+  },
   itemContainer: {
     height: 22,
-    marginVertical: 8,
   },
   itemText: {
     fontSize: 22,
