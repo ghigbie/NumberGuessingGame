@@ -1,5 +1,5 @@
 import React, {useState, useRef, useEffect} from 'react';
-import {View, Text, Button, StyleSheet, Alert} from 'react-native';
+import {View, Button, StyleSheet, Alert, ScrollView} from 'react-native';
 import Colors from './../constants/colors';
 
 import NumberContainer from './../components/NumberContainer';
@@ -89,11 +89,17 @@ const GameScreen = ({userChoice, onGameOver}) => {
         />
       </Card>
       {guesses.length > 0 && (
-        <Card style={styles.guessCard}>
-          {guesses.map((guess, index) => (
-            <ListItem key={index} style={styles.guessContainer} item={guess} />
-          ))}
-        </Card>
+        <View style={styles.guessList}>
+          <ScrollView contentContainerStyle={styles.list}>
+            {guesses.map((guess, index) => (
+              <ListItem
+                key={index}
+                style={styles.guessContainer}
+                item={guess}
+              />
+            ))}
+          </ScrollView>
+        </View>
       )}
     </View>
   );
@@ -122,16 +128,11 @@ const styles = StyleSheet.create({
     minHeight: 240,
     padding: 18,
   },
-  guessContainer: {
-    height: 22,
-    marginVertical: 8,
+  guessList: {
+    flex: 1,
+    marginTop: 44,
   },
-  guessText: {
-    fontSize: 22,
-    height: 26,
-    paddingLeft: 4,
-    color: Colors.primary,
-  },
+  list: {},
 });
 
 export default GameScreen;
