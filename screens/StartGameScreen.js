@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
 import {
   View,
-  Text,
   StyleSheet,
   Button,
-  TouchableWithoutFeedback,
   Keyboard,
   Alert,
+  Dimensions,
 } from 'react-native';
 import Colors from './../constants/colors';
 import Card from './../components/Card';
@@ -55,7 +54,7 @@ const StartGameScreen = ({onStartGame}) => {
     <View style={styles.container}>
       <TitleText style={styles.title}>Start a New Game</TitleText>
       <Card style={styles.inputContainer}>
-        <TitleText style={styles.title}>Select a Number</TitleText>
+        <BodyText style={styles.title}>Select a Number</BodyText>
         <Input
           style={styles.input}
           blurOnSubmit
@@ -123,7 +122,7 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     width: 300,
-    maxWidth: '80%',
+    maxWidth: '90%',
     justifyContent: 'space-between',
     alignItems: 'center',
     height: 200,
@@ -141,7 +140,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
   },
   button: {
-    width: 100,
+    width: Dimensions.get('window').width / 4,
   },
   summaryContainer: {
     marginTop: 20,

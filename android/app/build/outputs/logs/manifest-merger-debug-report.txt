@@ -5,10 +5,11 @@ INJECTED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/m
 INJECTED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/main/AndroidManifest.xml:1:1-27:12
 INJECTED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/main/AndroidManifest.xml:1:1-27:12
 MERGED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/main/AndroidManifest.xml:1:1-27:12
-MERGED from [com.facebook.flipper:flipper:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/8a6bd599203a172c7d6d90cda8284ff7/jetified-flipper-0.33.1/AndroidManifest.xml:8:1-18:12
+MERGED from [com.facebook.flipper:flipper:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/31d6b3729b19b7eb80196c3216d52555/jetified-flipper-0.33.1/AndroidManifest.xml:8:1-18:12
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/fa9d249d56579007dba70f8ee4dd5b3f/flipper-network-plugin-0.33.1/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/5a1065d4748ae359265a740b2069d44b/flipper-fresco-plugin-0.33.1/AndroidManifest.xml:8:1-15:12
-MERGED from [com.facebook.react:react-native:0.62.2] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/763536c78d6863f77184304937a07ba5/jetified-react-native-0.62.2/AndroidManifest.xml:2:1-13:12
+MERGED from [:react-native-vector-icons] /Users/georgehigbie/react-native/NumberGuessGame/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.react:react-native:0.62.2] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/59fc06223b4dae27349713e0b6505471/jetified-react-native-0.62.2/AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/055a171d10c43231a2795117ecd4c3fd/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [org.webkit:android-jsc:r245459] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/1ed26cdc1f47a6754ce1546799dd43a1/android-jsc-r245459/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.fresco:flipper:2.0.0] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/c180792e3f393fe4453d9c695595b3ef/flipper-2.0.0/AndroidManifest.xml:2:1-9:12
@@ -42,7 +43,7 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/georgehigbie/.g
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/ae802a55e74c19280a922e6de05f1e6e/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/2a1ee7c7818c2783ad723954444a3349/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.facebook.soloader:annotation:0.8.2] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/562a4d899b3a7a711a398f7636c8c187/annotation-0.8.2/AndroidManifest.xml:2:1-13:12
-MERGED from [com.facebook.fresco:fbcore:2.0.0] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/031b79013dff262f591b477875c04cc9/jetified-fbcore-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/35efec959cca0723bfbd72de6f95389a/jetified-fbcore-2.0.0/AndroidManifest.xml:2:1-9:12
 INJECTED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/debug/AndroidManifest.xml:2:1-8:12
 INJECTED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/debug/AndroidManifest.xml:2:1-8:12
 INJECTED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/debug/AndroidManifest.xml:2:1-8:12
@@ -65,16 +66,16 @@ INJECTED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/d
 		ADDED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
 ADDED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/main/AndroidManifest.xml:4:5-67
-MERGED from [com.facebook.flipper:flipper:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/8a6bd599203a172c7d6d90cda8284ff7/jetified-flipper-0.33.1/AndroidManifest.xml:15:5-67
-MERGED from [com.facebook.flipper:flipper:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/8a6bd599203a172c7d6d90cda8284ff7/jetified-flipper-0.33.1/AndroidManifest.xml:15:5-67
+MERGED from [com.facebook.flipper:flipper:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/31d6b3729b19b7eb80196c3216d52555/jetified-flipper-0.33.1/AndroidManifest.xml:15:5-67
+MERGED from [com.facebook.flipper:flipper:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/31d6b3729b19b7eb80196c3216d52555/jetified-flipper-0.33.1/AndroidManifest.xml:15:5-67
 	android:name
 		ADDED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/main/AndroidManifest.xml:4:22-64
 application
 ADDED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/main/AndroidManifest.xml:6:5-25:19
 MERGED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/main/AndroidManifest.xml:6:5-25:19
 MERGED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/main/AndroidManifest.xml:6:5-25:19
-MERGED from [com.facebook.react:react-native:0.62.2] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/763536c78d6863f77184304937a07ba5/jetified-react-native-0.62.2/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.react:react-native:0.62.2] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/763536c78d6863f77184304937a07ba5/jetified-react-native-0.62.2/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.62.2] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/59fc06223b4dae27349713e0b6505471/jetified-react-native-0.62.2/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.62.2] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/59fc06223b4dae27349713e0b6505471/jetified-react-native-0.62.2/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.8.2] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/a682a4f61b53a5eb0b34ff17728f4b20/soloader-0.8.2/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.8.2] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/a682a4f61b53a5eb0b34ff17728f4b20/soloader-0.8.2/AndroidManifest.xml:11:5-20
 MERGED from [androidx.core:core:1.1.0] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/4f509a65121478d6153615d7ef5b7c5f/core-1.1.0/AndroidManifest.xml:24:5-89
@@ -139,14 +140,16 @@ uses-sdk
 INJECTED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/main/AndroidManifest.xml
-MERGED from [com.facebook.flipper:flipper:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/8a6bd599203a172c7d6d90cda8284ff7/jetified-flipper-0.33.1/AndroidManifest.xml:11:5-13:41
-MERGED from [com.facebook.flipper:flipper:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/8a6bd599203a172c7d6d90cda8284ff7/jetified-flipper-0.33.1/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/31d6b3729b19b7eb80196c3216d52555/jetified-flipper-0.33.1/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/31d6b3729b19b7eb80196c3216d52555/jetified-flipper-0.33.1/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/fa9d249d56579007dba70f8ee4dd5b3f/flipper-network-plugin-0.33.1/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/fa9d249d56579007dba70f8ee4dd5b3f/flipper-network-plugin-0.33.1/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/5a1065d4748ae359265a740b2069d44b/flipper-fresco-plugin-0.33.1/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/5a1065d4748ae359265a740b2069d44b/flipper-fresco-plugin-0.33.1/AndroidManifest.xml:11:5-13:41
-MERGED from [com.facebook.react:react-native:0.62.2] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/763536c78d6863f77184304937a07ba5/jetified-react-native-0.62.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.62.2] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/763536c78d6863f77184304937a07ba5/jetified-react-native-0.62.2/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /Users/georgehigbie/react-native/NumberGuessGame/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /Users/georgehigbie/react-native/NumberGuessGame/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.62.2] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/59fc06223b4dae27349713e0b6505471/jetified-react-native-0.62.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.62.2] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/59fc06223b4dae27349713e0b6505471/jetified-react-native-0.62.2/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/055a171d10c43231a2795117ecd4c3fd/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/055a171d10c43231a2795117ecd4c3fd/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [org.webkit:android-jsc:r245459] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/1ed26cdc1f47a6754ce1546799dd43a1/android-jsc-r245459/AndroidManifest.xml:7:5-9:41
@@ -213,8 +216,8 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/georgehigbie/.gradle/
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/2a1ee7c7818c2783ad723954444a3349/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.facebook.soloader:annotation:0.8.2] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/562a4d899b3a7a711a398f7636c8c187/annotation-0.8.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.soloader:annotation:0.8.2] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/562a4d899b3a7a711a398f7636c8c187/annotation-0.8.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.fresco:fbcore:2.0.0] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/031b79013dff262f591b477875c04cc9/jetified-fbcore-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:2.0.0] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/031b79013dff262f591b477875c04cc9/jetified-fbcore-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/35efec959cca0723bfbd72de6f95389a/jetified-fbcore-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/35efec959cca0723bfbd72de6f95389a/jetified-fbcore-2.0.0/AndroidManifest.xml:5:5-7:41
 INJECTED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/debug/AndroidManifest.xml
 INJECTED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/debug/AndroidManifest.xml
 	android:targetSdkVersion
@@ -228,6 +231,6 @@ ADDED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/debu
 	android:name
 		ADDED from /Users/georgehigbie/react-native/NumberGuessGame/android/app/src/debug/AndroidManifest.xml:5:22-75
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from [com.facebook.flipper:flipper:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/8a6bd599203a172c7d6d90cda8284ff7/jetified-flipper-0.33.1/AndroidManifest.xml:16:5-76
+ADDED from [com.facebook.flipper:flipper:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/31d6b3729b19b7eb80196c3216d52555/jetified-flipper-0.33.1/AndroidManifest.xml:16:5-76
 	android:name
-		ADDED from [com.facebook.flipper:flipper:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/8a6bd599203a172c7d6d90cda8284ff7/jetified-flipper-0.33.1/AndroidManifest.xml:16:22-73
+		ADDED from [com.facebook.flipper:flipper:0.33.1] /Users/georgehigbie/.gradle/caches/transforms-2/files-2.1/31d6b3729b19b7eb80196c3216d52555/jetified-flipper-0.33.1/AndroidManifest.xml:16:22-73
