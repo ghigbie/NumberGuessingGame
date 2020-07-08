@@ -96,7 +96,12 @@ const GameScreen = ({userChoice, onGameOver}) => {
         />
       </Card>
       {guesses.length > 0 && (
-        <View style={styles.guessListContainer}>
+        <View
+          style={
+            Dimensions.get('window').width > 350
+              ? styles.guessListContainer
+              : styles.guessListContainerSmall
+          }>
           <ScrollView contentContainerStyle={styles.list}>
             {guesses.map((guess, index) => (
               <ListItem
@@ -139,7 +144,13 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 44,
     minHeight: 300,
-    minWidth: '60%',
+    width: '60%',
+  },
+  guessListContainerSmall: {
+    flex: 1,
+    marginTop: 44,
+    minHeight: 300,
+    width: '80%',
   },
   list: {
     flexGrow: 1,
