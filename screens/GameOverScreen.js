@@ -1,11 +1,13 @@
 import React from 'react';
-import {View, Text, StyleSheet, Button, Image} from 'react-native';
+import {View, Text, StyleSheet, Button, Image, Dimensions} from 'react-native';
 import Colors from './../constants/colors';
 import TitleText from './../components/TitleText';
 import BodyText from './../components/BodyText';
 import MainButton from './../components/MainButton';
 import colors from './../constants/colors';
 import Icon from 'react-native-vector-icons/FontAwesome';
+
+const windowWidth = Dimensions.get('window').width;
 
 const GameOverScreen = ({guessRounds, userNumber, onStartGame}) => {
   return (
@@ -52,9 +54,9 @@ const styles = StyleSheet.create({
     marginVertical: 24,
   },
   image: {
-    width: '80%',
-    height: 240,
-    borderRadius: 35,
+    width: windowWidth * 0.7,
+    height: windowWidth * 0.7,
+    borderRadius: (windowWidth * 0.7) / 2,
   },
   highlight: {
     color: colors.primary,
