@@ -20,7 +20,7 @@ const GameOverScreen = ({guessRounds, userNumber, onStartGame}) => {
   return (
     <View style={styles.container}>
       <ScrollView
-        contentContainerStyles={styles.scrollView}
+        contentContainerStyle={styles.scrollView}
         showsVerticalScrollIndicator={true}>
         <View style={styles.centerContainer}>
           <TitleText style={styles.text}>Game Over!</TitleText>

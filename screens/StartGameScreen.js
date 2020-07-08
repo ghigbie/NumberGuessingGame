@@ -6,6 +6,7 @@ import {
   Keyboard,
   Alert,
   Dimensions,
+  ScrollView,
 } from 'react-native';
 import Colors from './../constants/colors';
 import Card from './../components/Card';
@@ -51,63 +52,71 @@ const StartGameScreen = ({onStartGame}) => {
   };
 
   return (
-    <View style={styles.container}>
-      <TitleText style={styles.title}>Start a New Game</TitleText>
-      <Card style={styles.inputContainer}>
-        <BodyText style={styles.title}>Select a Number</BodyText>
-        <Input
-          style={styles.input}
-          blurOnSubmit
-          autoCapitalize="none"
-          autoCorrenct={false}
-          keyboardType="number-pad"
-          maxLength={2}
-          onChangeText={numberInputHandler}
-          value={enteredValue}
-        />
-        <View style={styles.buttonContainer}>
-          <View style={styles.button}>
-            <Button
-              title="Reset"
-              color={Colors.accent}
-              onPress={() => {
-                resetInputhandler();
-              }}
+    <View style={styles.outerContainer}>
+      <ScrollView contentContainerStyle={styles.scrollView}>
+        <View style={styles.innerContainer}>
+          <TitleText style={styles.title}>Start a New Game</TitleText>
+          <Card style={styles.inputContainer}>
+            <BodyText style={styles.title}>Select a Number</BodyText>
+            <Input
+              style={styles.input}
+              blurOnSubmit
+              autoCapitalize="none"
+              autoCorrenct={false}
+              keyboardType="number-pad"
+              maxLength={2}
+              onChangeText={numberInputHandler}
+              value={enteredValue}
             />
-          </View>
-          <View style={styles.button}>
-            <Button
-              title="Confirm"
-              color={Colors.primary}
-              onPress={() => {
-                confirmInputHandler();
-              }}
-            />
-          </View>
+            <View style={styles.buttonContainer}>
+              <View style={styles.button}>
+                <Button
+                  title="Reset"
+                  color={Colors.accent}
+                  onPress={() => {
+                    resetInputhandler();
+                  }}
+                />
+              </View>
+              <View style={styles.button}>
+                <Button
+                  title="Confirm"
+                  color={Colors.primary}
+                  onPress={() => {
+                    confirmInputHandler();
+                  }}
+                />
+              </View>
+            </View>
+          </Card>
+          {confirmed && (
+            <Card style={styles.summaryContainer}>
+              <BodyText>You Selected:</BodyText>
+              <NumberContainer>{selectedNumber}</NumberContainer>
+              <View style={styles.summaryButtonContainer}>
+                <MainButton onPress={() => onStartGame(selectedNumber)}>
+                  <Icon name="rocket" size={24} color="#fff" />
+                </MainButton>
+              </View>
+            </Card>
+          )}
         </View>
-      </Card>
-      {confirmed && (
-        <Card style={styles.summaryContainer}>
-          <BodyText>You Selected:</BodyText>
-          <NumberContainer>{selectedNumber}</NumberContainer>
-          <View style={styles.summaryButtonContainer}>
-            <MainButton onPress={() => onStartGame(selectedNumber)}>
-              <Icon name="rocket" size={24} color="#fff" />
-            </MainButton>
-          </View>
-        </Card>
-      )}
+      </ScrollView>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 12,
+  outerContainer: {
+    height: Dimensions.get('window').height,
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    marginHorizontal: 8,
+    marginVertical: Dimensions.get('window').height * 0.0175,
   },
+  innerContainer: {
+    alignItems: 'center',
+  },
+  scrollView: {},
   title: {
     color: Colors.softGrey,
     fontSize: 24,
