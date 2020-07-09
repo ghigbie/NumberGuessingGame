@@ -7,6 +7,7 @@ import {
   Alert,
   Dimensions,
   ScrollView,
+  KeyboardAvoidingView,
 } from 'react-native';
 import Colors from './../constants/colors';
 import Card from './../components/Card';
@@ -54,53 +55,55 @@ const StartGameScreen = ({onStartGame}) => {
   return (
     <View style={styles.outerContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <View style={styles.innerContainer}>
-          <TitleText style={styles.title}>Start a New Game</TitleText>
-          <Card style={styles.inputContainer}>
-            <BodyText style={styles.title}>Select a Number</BodyText>
-            <Input
-              style={styles.input}
-              blurOnSubmit
-              autoCapitalize="none"
-              autoCorrenct={false}
-              keyboardType="number-pad"
-              maxLength={2}
-              onChangeText={numberInputHandler}
-              value={enteredValue}
-            />
-            <View style={styles.buttonContainer}>
-              <View style={styles.button}>
-                <Button
-                  title="Reset"
-                  color={Colors.accent}
-                  onPress={() => {
-                    resetInputhandler();
-                  }}
-                />
-              </View>
-              <View style={styles.button}>
-                <Button
-                  title="Confirm"
-                  color={Colors.primary}
-                  onPress={() => {
-                    confirmInputHandler();
-                  }}
-                />
-              </View>
-            </View>
-          </Card>
-          {confirmed && (
-            <Card style={styles.summaryContainer}>
-              <BodyText>You Selected:</BodyText>
-              <NumberContainer>{selectedNumber}</NumberContainer>
-              <View style={styles.summaryButtonContainer}>
-                <MainButton onPress={() => onStartGame(selectedNumber)}>
-                  <Icon name="rocket" size={24} color="#fff" />
-                </MainButton>
+        <KeyboardAvoidingView behavior="position">
+          <View style={styles.innerContainer}>
+            <TitleText style={styles.title}>Start a New Game</TitleText>
+            <Card style={styles.inputContainer}>
+              <BodyText style={styles.title}>Select a Number</BodyText>
+              <Input
+                style={styles.input}
+                blurOnSubmit
+                autoCapitalize="none"
+                autoCorrenct={false}
+                keyboardType="number-pad"
+                maxLength={2}
+                onChangeText={numberInputHandler}
+                value={enteredValue}
+              />
+              <View style={styles.buttonContainer}>
+                <View style={styles.button}>
+                  <Button
+                    title="Reset"
+                    color={Colors.accent}
+                    onPress={() => {
+                      resetInputhandler();
+                    }}
+                  />
+                </View>
+                <View style={styles.button}>
+                  <Button
+                    title="Confirm"
+                    color={Colors.primary}
+                    onPress={() => {
+                      confirmInputHandler();
+                    }}
+                  />
+                </View>
               </View>
             </Card>
-          )}
-        </View>
+            {confirmed && (
+              <Card style={styles.summaryContainer}>
+                <BodyText>You Selected:</BodyText>
+                <NumberContainer>{selectedNumber}</NumberContainer>
+                <View style={styles.summaryButtonContainer}>
+                  <MainButton onPress={() => onStartGame(selectedNumber)}>
+                    <Icon name="rocket" size={24} color="#fff" />
+                  </MainButton>
+                </View>
+              </Card>
+            )}
+          </View>
+        </KeyboardAvoidingView>
       </ScrollView>
     </View>
   );
