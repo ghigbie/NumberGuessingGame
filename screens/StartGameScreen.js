@@ -55,7 +55,7 @@ const StartGameScreen = ({onStartGame}) => {
   return (
     <View style={styles.outerContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <KeyboardAvoidingView behavior="position">
+        <KeyboardAvoidingView behavior="position" keyboardVerticalOffset={30}>
           <View style={styles.innerContainer}>
             <TitleText style={styles.title}>Start a New Game</TitleText>
             <Card style={styles.inputContainer}>
