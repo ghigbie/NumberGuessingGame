@@ -8,6 +8,7 @@ import {
   Dimensions,
   ScrollView,
   KeyboardAvoidingView,
+  Platform,
 } from 'react-native';
 import Colors from './../constants/colors';
 import Card from './../components/Card';
@@ -55,7 +56,9 @@ const StartGameScreen = ({onStartGame}) => {
   return (
     <View style={styles.outerContainer}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <KeyboardAvoidingView behavior="position" keyboardVerticalOffset={30}>
+        <KeyboardAvoidingView
+          behavior={Platform.OS === 'ios' ? 'position' : 'padding'}
+          keyboardVerticalOffset={30}>
           <View style={styles.innerContainer}>
             <TitleText style={styles.title}>Start a New Game</TitleText>
             <Card style={styles.inputContainer}>
