@@ -16,7 +16,7 @@ import NumberContainer from './../components/NumberContainer';
 import TitleText from './../components/TitleText';
 import BodyText from './../components/BodyText';
 import MainButton from './../components/MainButton';
-import Icon from 'react-native-vector-icons/FontAwesome';
+//import Icon from 'react-native-vector-icons/FontAwesome';
 
 const StartGameScreen = ({onStartGame}) => {
   const [enteredValue, setEnteredValue] = useState('');
@@ -97,7 +97,7 @@ const StartGameScreen = ({onStartGame}) => {
                 <NumberContainer>{selectedNumber}</NumberContainer>
                 <View style={styles.summaryButtonContainer}>
                   <MainButton onPress={() => onStartGame(selectedNumber)}>
-                    <Icon name="rocket" size={24} color="#fff" />
+                    moo
                   </MainButton>
                 </View>
               </Card>

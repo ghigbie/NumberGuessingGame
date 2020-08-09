@@ -11,7 +11,7 @@ import Colors from './../constants/colors';
 import TitleText from './../components/TitleText';
 import BodyText from './../components/BodyText';
 import MainButton from './../components/MainButton';
-import Icon from 'react-native-vector-icons/FontAwesome';
+//import Icon from 'react-native-vector-icons/FontAwesome';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -38,9 +38,7 @@ const GameOverScreen = ({guessRounds, userNumber, onStartGame}) => {
             The number was: <Text style={styles.highlight}>{userNumber}</Text>
           </Text>
           <View style={styles.buttonContainer}>
-            <MainButton onPress={onStartGame}>
-              <Icon name="rocket" size={24} color="#fff" />
-            </MainButton>
+            <MainButton onPress={onStartGame}>Moo</MainButton>
           </View>
         </View>
       </ScrollView>
