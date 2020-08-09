@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   StyleSheet,
@@ -27,11 +27,17 @@ const StartGameScreen = ({onStartGame}) => {
     Dimensions.get('window').width / 4,
   );
 
-  const updateLayout = () => {
-    setButtonWidth(Dimensions.get('window').width / 4);
-  };
+  useEffect(() => {
+    console.log('use effect called');
+    const updateLayout = () => {
+      setButtonWidth(Dimensions.get('window').width / 4);
+    };
 
-  Dimensions.addEventListener('change', updateLayout); //listens for layout change
+    Dimensions.addEventListener('change', updateLayout); //for layout change
+    return () => {
+      Dimensions.removeEventListener('change', updateLayout);
+    };
+  });
 
   const numberInputHandler = inputText => {
     const sanitizedText = inputText.replace(/[^0-9]/g, '');
@@ -83,7 +89,7 @@ const StartGameScreen = ({onStartGame}) => {
                 value={enteredValue}
               />
               <View style={styles.buttonContainer}>
-                <View style={styles.button}>
+                <View style={{...styles.button, width: buttonWidth}}>
                   <Button
                     title="Reset"
                     color={Colors.accent}
@@ -92,7 +98,7 @@ const StartGameScreen = ({onStartGame}) => {
                     }}
                   />
                 </View>
-                <View style={styles.button}>
+                <View style={{...styles.button, width: buttonWidth}}>
                   <Button
                     title="Confirm"
                     color={Colors.primary}
@@ -109,7 +115,7 @@ const StartGameScreen = ({onStartGame}) => {
                 <NumberContainer>{selectedNumber}</NumberContainer>
                 <View style={styles.summaryButtonContainer}>
                   <MainButton onPress={() => onStartGame(selectedNumber)}>
-                    moo
+                    Begin
                   </MainButton>
                 </View>
               </Card>
@@ -163,9 +169,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 14,
   },
-  button: {
-    width: buttonWidth,
-  },
+  button: {},
   summaryContainer: {
     marginTop: 20,
     alignItems: 'center',

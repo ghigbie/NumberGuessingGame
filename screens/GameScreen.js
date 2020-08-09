@@ -37,6 +37,25 @@ const GameScreen = ({userChoice, onGameOver}) => {
   const currentLow = useRef(absMin);
   const currentHigh = useRef(absMax);
 
+  const [availableDeviceWidth, setAvailableDeviceWidth] = useState(
+    Dimensions.get('screen').width,
+  );
+  const [availableDeviceHeight, setAvalableDeviceHeight] = useState(
+    Dimensions.get('scree').height,
+  );
+
+  useEffect(() => {
+    const updateLayout = () => {
+      setAvailableDeviceWidth(Dimensions.get('screen').width);
+      setAvalableDeviceHeight(Dimensions.get('screen').height);
+    };
+
+    Dimensions.addEventListener('change', updateLayout);
+    return () => {
+      Dimensions.removeEventListener('change');
+    };
+  });
+
   useEffect(() => {
     if (currentGuess === userChoice) {
       onGameOver(guesses.length);
