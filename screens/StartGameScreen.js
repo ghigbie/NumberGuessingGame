@@ -23,6 +23,15 @@ const StartGameScreen = ({onStartGame}) => {
   const [enteredValue, setEnteredValue] = useState('');
   const [confirmed, setConfirmed] = useState(false);
   const [selectedNumber, setSelectedNumber] = useState(null);
+  const [buttonWidth, setButtonWidth] = useState(
+    Dimensions.get('window').width / 4,
+  );
+
+  const updateLayout = () => {
+    setButtonWidth(Dimensions.get('window').width / 4);
+  };
+
+  Dimensions.addEventListener('change', updateLayout); //listens for layout change
 
   const numberInputHandler = inputText => {
     const sanitizedText = inputText.replace(/[^0-9]/g, '');
@@ -155,7 +164,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
   },
   button: {
-    width: Dimensions.get('window').width / 4,
+    width: buttonWidth,
   },
   summaryContainer: {
     marginTop: 20,
